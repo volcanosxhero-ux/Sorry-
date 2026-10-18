@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>محكمة بسبوستي العليا</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;background:#100812;color:white;
+font-family:Tahoma,Arial;text-align:center
+}
+.page{
+display:none;min-height:100vh;padding:20px;
+align-items:center;justify-content:center;
+background:radial-gradient(ellipse at top,#63223e,#100812)
+}
+.page.active{display:flex}
+.panel{
+width:100%;max-width:600px;padding:28px 18px;
+background:#190f1b;border:1px solid #d8b66e;
+border-radius:18px;box-shadow:0 0 30px #a14c5140
+}
+h1,h2{color:#edcf89}
+h1{font-size:clamp(26px,7vw,40px)}
+p{line-height:2}
+button{
+padding:14px 18px;margin:8px;
+border:1px solid #f0dba2;border-radius:9px;
+background:linear-gradient(135deg,#f2d995,#b38a45);
+color:#24131b;font-weight:bold;font-size:15px;
+cursor:pointer
+}
+.icon{font-size:55px}
+.gold{color:#e8cb86}
+input{
+width:100%;padding:14px;background:#251725;
+color:white;border:1px solid #d5b36b;
+border-radius:8px;text-align:center;font-size:17px
+}
+.paper{
+background:#f5e8cb;color:#40281d;padding:20px;
+border:6px double #a47b3a;line-height:2;margin-top:20px
+}
+.paper h2{color:#704320}
+.seal{
+border:3px solid #9a2525;border-radius:50%;
+width:90px;height:90px;display:grid;
+place-items:center;margin:20px auto;color:#8b2222
+}
+</style>
+</head>
+<body>
+
+<section class="page active" id="p1">
+<div class="panel">
+<div class="gold">المملكة الفيلوباتيرية تقدم</div>
+<div class="icon">⚖️</div>
+<h1>محكمة بسبوستي العليا</h1>
+<p class="gold">القضية رقم 10/10</p>
+<p>المتهم: فيلوباتير، الشهير بفيلو.</p>
+<p>القاضية: بسملة، الشهيرة ببسبوسة.</p>
+<p>التهمة: التسبب في غيرة سيادة القاضي بسبوستي.</p>
+<h2>البسي الروب يا سيادة القاضي!</h2>
+<p>المتهم واقف بره ومستني الإذن بالدخول.</p>
+<button onclick="go('p2')">دخول قاعة المحكمة</button>
+</div>
+</section>
+
+<section class="page" id="p2">
+<div class="panel">
+<div class="icon">⚖️</div>
+<h1>افتتاح الجلسة</h1>
+<p>سيادة القاضي: بسملة، الشهيرة ببسبوسة.</p>
+<p>المتهم: فيلوباتير، الشهير بفيلو.</p>
+<p>التهمة: خليت بسبوستي تغير، والمتهم عنده أقوال تانية 😂❤️</p>
+<h2>هل تأمر سيادة القاضي ببدء المحاكمة؟</h2>
+<button onclick="go('p3')">بدء المحاكمة</button>
+</div>
+</section>
+<section class="page" id="p3">
+<div class="panel">
+<div class="icon">📜</div>
+<h1>لائحة الاتهام</h1>
+<p>بعد الاطلاع على مشاعر سيادة القاضي، ثبتت التهم الآتية:</p>
+<p>التهمة الأولى: خلي بسبوستي تغير.</p>
+<p>التهمة الثانية: تسبب في غيرة القاضي من بنت كانت بتبص عليه.</p>
+<p>التهمة الثالثة: المتهم بيحاول يطلع براءة بدل ما يصالح القاضي 😂</p>
+<h2>هل يعترف المتهم بالتهم؟</h2>
+<button onclick="go('p4')">أعترف يا سيادة القاضي</button>
+<button onclick="go('p5')">عندي دفاع يا فندم</button>
+</div>
+</section>
+
+<section class="page" id="p4">
+<div class="panel">
+<div class="icon">🔎</div>
+<h1>الأدلة المقدمة</h1>
+<p>الدليل الأول: سيادة القاضي غيرت، وده معناه إن المتهم فارق معاها ❤️</p>
+<p>الدليل الثاني: المتهم جاي يعمل محكمة كاملة مخصوص عشان يصالح بسبوستي.</p>
+<p>الدليل الثالث: المتهم بيقر رسميًا إن زعل بسبوستي مش حاجة بسيطة عنده.</p>
+<h2>هل تقبل سيادة القاضي الأدلة؟</h2>
+<button onclick="go('p6')">الأدلة مقبولة</button>
+<button onclick="go('p5')">أطلب فرصة للدفاع</button>
+</div>
+</section>
+
+<section class="page" id="p5">
+<div class="panel">
+<div class="icon">🎙️</div>
+<h1>دفاع المتهم</h1>
+<p>يا سيادة القاضي بسبوستي، أنا مش جاي أجادل في غيرتك، أنا جاي أقولك إن زعلك يهمني.</p>
+<p>أنا عارف إني خليتك تغيري، وحقك عليا لو ضايقتك. إنتِ غالية عندي، وآخر حاجة أتمناها إنك تزعلي مني.</p>
+<p>وبطلب من المحكمة فرصة أصلح اللي حصل وأرجّع ضحكتك الجميلة ❤️</p>
+<button onclick="go('p6')">انتهى دفاع المتهم</button>
+</div>
+</section>
+
+<section class="page" id="p6">
+<div class="panel">
+<div class="icon">⚖️</div>
+<h1>لحظة النطق بالحكم</h1>
+<p>بعد المداولة والاطلاع على الأدلة وسماع دفاع المتهم...</p>
+<h2>قرار سيادة القاضي بسبوستي:</h2>
+<button onclick="go('p7')">حكمت المحكمة بالصلح ❤️</button>
+<button onclick="go('p8')">المتهم يوقّع على التعهد 😂</button>
+</div>
+</section>
+
+<section class="page" id="p7">
+<div class="panel">
+<div class="icon">❤️</div>
+<h1>جلسة الصلح</h1>
+<p>المتهم يتعهد إنه يسمع سيادة القاضي، ويهتم بمشاعرها، ويحاول مايزعلهاش.</p>
+<p>والقاضي ليها حق تطلب من المتهم اعتذار رسمي مع ابتسامة إجبارية 😂</p>
+<h2>ممكن نتصالح يا بسبوستي؟</h2>
+<button onclick="go('p8')">نروح نمضي التعهد</button>
+</div>
+</section>
+
+<section class="page" id="p8">
+<div class="panel">
+<div class="icon">📜</div>
+<h1>تعهد المتهم الرسمي</h1>
+<div class="paper">
+<h2>محكمة بسبوستي العليا</h2>
+<p>أنا المتهم فيلوباتير، أتعهد قدام سيادة القاضي بسملة إني أحترم مشاعرها، وأسمعها، وأحاول أصلح أي حاجة تضايقها.</p>
+<p>وأقر إن سيادة القاضي بسبوستي ليها مكانة خاصة عندي ❤️</p>
+<label>اسم سيادة القاضي</label>
+<input id="judge" placeholder="اكتبي اسمك يا بسبوستي">
+<br>
+<button onclick="sign()">توقيع وختم المحكمة</button>
+<div id="result"></div>
+</div>
+<button onclick="go('p1')">إعادة المحاكمة من الأول</button>
+</div>
+</section>
+
+<script>
+function go(id){
+document.querySelectorAll('.page').forEach(function(p){
+p.classList.remove('active');
+});
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
+}
+function sign(){
+let name=document.getElementById('judge').value.trim();
+if(!name){
+alert('سيادة القاضي، اكتبي اسمك الأول 😂');
+return;
+}
+document.getElementById('result').innerHTML=
+'<div class="seal">تم التوقيع</div>'+
+'<h2>ختم سيادة القاضي: '+escapeHTML(name)+'</h2>'+
+'<p>صدر الحكم، والمتهم مستني رضاكي يا بسبوستي ❤️</p>';
+}
+function escapeHTML(text){
+return text.replace(/[&<>"']/g,function(c){
+return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+});
+}
+</script>
+</body>
+</html>
